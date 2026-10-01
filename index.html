@@ -301,41 +301,131 @@
       <section class="about" id="sobre">
         <div class="container about__inner">
           <div class="about__media" data-animate>
-            <!-- Placeholder de imagem: substitua por assets/images/dr-emerson.jpg -->
-            <div class="about__image-frame">
-              <div class="about__image-placeholder">
-                <svg width="60" height="60" viewBox="0 0 24 24" fill="none" aria-hidden="true">
-                  <circle cx="12" cy="8" r="4" stroke="currentColor" stroke-width="1.4" />
-                  <path
-                    d="M4 20C4 16.13 7.58 13 12 13C16.42 13 20 16.13 20 20"
-                    stroke="currentColor"
-                    stroke-width="1.4"
-                  />
-                </svg>
-                <span>Imagem: assets/images/dr-emerson.jpg</span>
-              </div>
+            <div class="about__image-frame about__image-frame--primary">
+              <img
+                src="assets/images/advogado-1.jpeg"
+                alt="Advogado do escritório"
+                class="about__image"
+              />
             </div>
-            <div class="about__badge">
-              <strong>+10</strong>
-              <span>anos de experiência na área jurídica</span>
+            <div class="about__image-frame about__image-frame--secondary">
+              <img
+                src="assets/images/advogado-2.jpeg"
+                alt="Advogado do escritório"
+                class="about__image"
+              />
             </div>
           </div>
 
           <div class="about__content" data-animate>
-            <p class="section-kicker">Sobre o escritório</p>
-            <h2>Compromisso com quem confia em nós</h2>
-            <!-- Texto institucional genérico: substituir por biografia, OAB e especializações reais antes da publicação -->
+            <p class="section-kicker">Sobre nós</p>
+            <h2>
+              Experiência e compromisso com o que realmente importa:
+              <span class="about__highlight">seus direitos.</span>
+            </h2>
+
             <p>
-              O escritório Dr Emerson Advocacia nasceu do compromisso de oferecer uma assessoria
-              jurídica próxima, clara e estratégica. Acreditamos que cada cliente merece ser ouvido
-              com atenção e representado com seriedade, do primeiro contato até a solução final do
-              caso.
+              <strong>Desde 2022</strong>, nossa equipe atua na advocacia com experiência nas áreas
+              <strong>Trabalhista, Cível e Previdenciária</strong>, oferecendo uma atuação
+              estratégica, técnica e personalizada em cada demanda.
             </p>
             <p>
-              Atuamos de forma personalizada, sempre buscando as melhores alternativas — seja por
-              meio de negociação, acordo ou judicialmente — para proteger os interesses de quem
-              confia em nosso trabalho.
+              Aliamos conhecimento jurídico, experiência prática e constante atualização para
+              compreender cada caso em sua particularidade e construir estratégias adequadas aos
+              interesses de nossos clientes.
             </p>
+            <p>
+              Nossa atuação é pautada pela ética, transparência e atendimento humanizado,
+              proporcionando orientação clara e acompanhamento próximo em todas as etapas.
+            </p>
+            <p>
+              Mais do que conduzir processos, buscamos proteger direitos, oferecer segurança
+              jurídica e construir soluções responsáveis para cada cliente.
+            </p>
+
+            <ul class="about__features">
+              <li>
+                <span class="about__feature-icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none">
+                    <path d="M12 3V21" stroke="currentColor" stroke-width="1.5" />
+                    <path d="M4 6H20" stroke="currentColor" stroke-width="1.5" />
+                    <path
+                      d="M7 6L4 12C4 14 6 15 7 15C8 15 10 14 10 12L7 6Z"
+                      stroke="currentColor"
+                      stroke-width="1.5"
+                      stroke-linejoin="round"
+                    />
+                    <path
+                      d="M17 6L14 12C14 14 16 15 17 15C18 15 20 14 20 12L17 6Z"
+                      stroke="currentColor"
+                      stroke-width="1.5"
+                      stroke-linejoin="round"
+                    />
+                    <rect x="9" y="19" width="6" height="2" rx="1" fill="currentColor" />
+                  </svg>
+                </span>
+                <span>Atendimento<br />Personalizado</span>
+              </li>
+              <li>
+                <span class="about__feature-icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none">
+                    <path
+                      d="M12 3L20 6V11C20 16 16.5 19.5 12 21C7.5 19.5 4 16 4 11V6L12 3Z"
+                      stroke="currentColor"
+                      stroke-width="1.5"
+                      stroke-linejoin="round"
+                    />
+                    <path
+                      d="M9 12L11 14L15.5 9.5"
+                      stroke="currentColor"
+                      stroke-width="1.6"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                </span>
+                <span>Compromisso e<br />Transparência</span>
+              </li>
+              <li>
+                <span class="about__feature-icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none">
+                    <circle cx="8" cy="8" r="3" stroke="currentColor" stroke-width="1.5" />
+                    <path
+                      d="M2 20C2 16.69 4.69 14 8 14C11.31 14 14 16.69 14 20"
+                      stroke="currentColor"
+                      stroke-width="1.5"
+                    />
+                    <circle cx="17" cy="7" r="2.2" stroke="currentColor" stroke-width="1.5" />
+                    <path
+                      d="M14.5 20C14.5 17.24 16.24 15.2 18.7 14.6C20.7 15.15 22 16.9 22 20"
+                      stroke="currentColor"
+                      stroke-width="1.5"
+                    />
+                  </svg>
+                </span>
+                <span>Equipe<br />Especializada</span>
+              </li>
+              <li>
+                <span class="about__feature-icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none">
+                    <path
+                      d="M4 5C4 4.45 4.45 4 5 4H11V20H5C4.45 20 4 19.55 4 19V5Z"
+                      stroke="currentColor"
+                      stroke-width="1.5"
+                      stroke-linejoin="round"
+                    />
+                    <path
+                      d="M20 5C20 4.45 19.55 4 19 4H13V20H19C19.55 20 20 19.55 20 19V5Z"
+                      stroke="currentColor"
+                      stroke-width="1.5"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                </span>
+                <span>Atualização<br />Contínua</span>
+              </li>
+            </ul>
+
             <a href="#contato" class="btn btn--outline-gold">Agende uma consulta</a>
           </div>
         </div>
