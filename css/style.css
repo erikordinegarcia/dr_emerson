@@ -232,8 +232,8 @@ input, textarea, button { font-family: inherit; font-size: inherit; }
 }
 
 .logo__mark {
-  width: 64px;
-  height: 64px;
+  width: 84px;
+  height: 84px;
   flex-shrink: 0;
   object-fit: contain;
 }
