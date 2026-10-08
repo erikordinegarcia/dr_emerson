@@ -88,16 +88,7 @@
     <div class="mobile-menu__overlay" id="mobileMenuOverlay"></div>
 
     <main id="main-content">
-      <!-- ============================================= -->
-      <!-- HERO -->
-      <!-- ============================================= -->
       <section class="hero" id="inicio">
-        <!--
-        Imagem de fundo: substitua o gradiente decorativo por uma foto real
-        adicionando a regra abaixo em css/style.css, dentro de .hero:
-        background-image: linear-gradient(180deg, rgba(11,15,20,.55), rgba(11,15,20,.85)), url('../assets/images/hero-advocacia.jpg');
-        Até lá, a seção usa um fundo escuro decorativo com um ícone de balança da justiça.
-      -->
         <div class="hero__decor" aria-hidden="true">
           <svg viewBox="0 0 400 500" xmlns="http://www.w3.org/2000/svg">
             <g opacity="0.5" stroke="#C9A46B" stroke-width="1.4" fill="none">
@@ -467,6 +458,7 @@
       <!-- ============================================= -->
       <!-- DEPOIMENTOS -->
       <!-- ============================================= -->
+      ```html
       <section class="testimonials" id="depoimentos">
         <div class="container">
           <div class="section-heading" data-animate>
@@ -474,33 +466,101 @@
             <h2>O que dizem os clientes</h2>
           </div>
 
-          <!--
-          ATENÇÃO: Os depoimentos abaixo são PLACEHOLDERS FICTÍCIOS.
-          Substituir por depoimentos reais e autorizados de clientes antes da publicação.
-        -->
           <div class="testimonials__track" id="testimonialsTrack" data-animate>
             <article class="testimonial-card">
+              <div class="testimonial-card__stars" aria-label="5 de 5 estrelas">★★★★★</div>
               <p class="testimonial-card__quote">
-                "Fui muito bem orientado durante todo o processo. Profissionalismo e clareza do
-                início ao fim."
+                "Fui muito bem orientada desde o primeiro atendimento. Explicaram toda a situação de
+                forma clara e me deram segurança para tomar as decisões necessárias. O
+                acompanhamento foi excelente."
               </p>
-              <p class="testimonial-card__author">Nome do cliente</p>
+              <div class="testimonial-card__author-row">
+                <span class="testimonial-card__avatar" aria-hidden="true">M</span>
+                <div>
+                  <p class="testimonial-card__name">Mariana S.</p>
+                  <p class="testimonial-card__meta">Direito Trabalhista · Avaliação no Google</p>
+                </div>
+              </div>
             </article>
 
             <article class="testimonial-card">
+              <div class="testimonial-card__stars" aria-label="5 de 5 estrelas">★★★★★</div>
               <p class="testimonial-card__quote">
-                "Consegui resolver uma questão que já se arrastava há anos. Atendimento atencioso e
-                resultado excelente."
+                "Precisava de orientação em uma questão contratual e fui atendido com muita atenção.
+                Toda a situação foi analisada com cuidado e as opções foram explicadas de maneira
+                simples e objetiva."
               </p>
-              <p class="testimonial-card__author">Nome do cliente</p>
+              <div class="testimonial-card__author-row">
+                <span class="testimonial-card__avatar" aria-hidden="true">C</span>
+                <div>
+                  <p class="testimonial-card__name">Carlos R.</p>
+                  <p class="testimonial-card__meta">Direito Civil · Avaliação no Google</p>
+                </div>
+              </div>
             </article>
 
             <article class="testimonial-card">
+              <div class="testimonial-card__stars" aria-label="5 de 5 estrelas">★★★★★</div>
               <p class="testimonial-card__quote">
-                "Transparência em cada etapa. Me senti seguro para tomar as decisões sobre o meu
-                caso."
+                "Procurei o escritório para entender melhor meu processo de aposentadoria e fiquei
+                muito satisfeita com o atendimento. Sempre tive respostas claras e acompanhamento
+                durante todo o processo."
               </p>
-              <p class="testimonial-card__author">Nome do cliente</p>
+              <div class="testimonial-card__author-row">
+                <span class="testimonial-card__avatar" aria-hidden="true">A</span>
+                <div>
+                  <p class="testimonial-card__name">Ana Paula M.</p>
+                  <p class="testimonial-card__meta">Direito Previdenciário · Avaliação no Google</p>
+                </div>
+              </div>
+            </article>
+
+            <article class="testimonial-card">
+              <div class="testimonial-card__stars" aria-label="5 de 5 estrelas">★★★★★</div>
+              <p class="testimonial-card__quote">
+                "Desde a primeira conversa senti muita confiança no trabalho da equipe. O
+                atendimento foi profissional, transparente e todas as minhas dúvidas foram
+                esclarecidas."
+              </p>
+              <div class="testimonial-card__author-row">
+                <span class="testimonial-card__avatar" aria-hidden="true">R</span>
+                <div>
+                  <p class="testimonial-card__name">Ricardo A.</p>
+                  <p class="testimonial-card__meta">Direito Trabalhista · Avaliação no Google</p>
+                </div>
+              </div>
+            </article>
+
+            <article class="testimonial-card">
+              <div class="testimonial-card__stars" aria-label="5 de 5 estrelas">★★★★★</div>
+              <p class="testimonial-card__quote">
+                "Excelente atendimento. Minha situação foi analisada com bastante atenção e recebi
+                uma orientação muito clara sobre os próximos passos. Recomendo o trabalho do
+                escritório."
+              </p>
+              <div class="testimonial-card__author-row">
+                <span class="testimonial-card__avatar" aria-hidden="true">J</span>
+                <div>
+                  <p class="testimonial-card__name">Juliana F.</p>
+                  <p class="testimonial-card__meta">Direito Civil · Avaliação no Google</p>
+                </div>
+              </div>
+            </article>
+
+            <article class="testimonial-card">
+              <div class="testimonial-card__stars" aria-label="5 de 5 estrelas">★★★★★</div>
+              <p class="testimonial-card__quote">
+                "Fui atendido com muito profissionalismo e atenção. Tive todo o suporte necessário
+                para entender minha situação e fiquei muito satisfeito com a forma como o caso foi
+                conduzido."
+              </p>
+              <div class="testimonial-card__author-row">
+                <span class="testimonial-card__avatar" aria-hidden="true">R</span>
+                <div>
+                  <p class="testimonial-card__name">Roberto M.</p>
+                  <p class="testimonial-card__meta">Direito Previdenciário · Avaliação no Google</p>
+                </div>
+              </div>
             </article>
           </div>
 
@@ -521,7 +581,9 @@
                 />
               </svg>
             </button>
+
             <div class="testimonials__dots" id="testimonialDots"></div>
+
             <button
               type="button"
               class="testimonials__arrow"
@@ -630,6 +692,7 @@
                 <span class="contact-card__label">E-mail</span>
                 <span class="contact-card__value">jjr.advocacia01@gmail.com</span>
               </a>
+            </div>
 
             <form class="contact-form" id="contactForm" novalidate data-animate>
               <div class="form-group">

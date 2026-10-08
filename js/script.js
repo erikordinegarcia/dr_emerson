@@ -121,38 +121,75 @@ document.addEventListener('DOMContentLoaded', function () {
   if (track) {
     var slides = track.querySelectorAll('.testimonial-card');
     var current = 0;
+    var perView = 1;
+    var pages = 1;
+    var dots = [];
 
-    slides.forEach(function (_, i) {
-      var dot = document.createElement('button');
-      dot.type = 'button';
-      dot.setAttribute('aria-label', 'Ir para depoimento ' + (i + 1));
-      if (i === 0) dot.classList.add('is-active');
-      dot.addEventListener('click', function () { goToSlide(i); });
-      dotsWrap.appendChild(dot);
-    });
+    function calcLayout() {
+      var cardW = slides[0].offsetWidth;
+      var gap = parseFloat(getComputedStyle(track).columnGap || getComputedStyle(track).gap) || 0;
+      perView = Math.max(1, Math.round((track.clientWidth + gap) / (cardW + gap)));
+      pages = Math.ceil(slides.length / perView);
+    }
 
-    var dots = dotsWrap.querySelectorAll('button');
-
-    function goToSlide(index) {
-      if (index < 0) index = slides.length - 1;
-      if (index >= slides.length) index = 0;
-      current = index;
-      track.scrollTo({ left: slides[current].offsetLeft - track.offsetLeft, behavior: 'smooth' });
+    function setActive() {
       dots.forEach(function (d, i) { d.classList.toggle('is-active', i === current); });
     }
 
-    prevBtn.addEventListener('click', function () { goToSlide(current - 1); });
-    nextBtn.addEventListener('click', function () { goToSlide(current + 1); });
+    function buildDots() {
+      dotsWrap.innerHTML = '';
+      dots = [];
+      for (var i = 0; i < pages; i++) {
+        (function (i) {
+          var dot = document.createElement('button');
+          dot.type = 'button';
+          dot.setAttribute('aria-label', 'Ir para página ' + (i + 1) + ' de depoimentos');
+          dot.addEventListener('click', function () { goToPage(i); });
+          dotsWrap.appendChild(dot);
+          dots.push(dot);
+        })(i);
+      }
+      setActive();
+    }
+
+    function goToPage(p) {
+      if (p < 0) p = pages - 1;
+      if (p >= pages) p = 0;
+      current = p;
+      var target = slides[Math.min(p * perView, slides.length - 1)];
+      track.scrollTo({ left: target.offsetLeft - track.offsetLeft, behavior: 'smooth' });
+      setActive();
+    }
+
+    function init() {
+      calcLayout();
+      current = Math.min(current, pages - 1);
+      buildDots();
+      var target = slides[Math.min(current * perView, slides.length - 1)];
+      track.scrollLeft = target.offsetLeft - track.offsetLeft;
+    }
+
+    prevBtn.addEventListener('click', function () { goToPage(current - 1); });
+    nextBtn.addEventListener('click', function () { goToPage(current + 1); });
 
     var scrollTimeout;
     track.addEventListener('scroll', function () {
       clearTimeout(scrollTimeout);
       scrollTimeout = setTimeout(function () {
-        var index = Math.round(track.scrollLeft / track.clientWidth);
-        current = index;
-        dots.forEach(function (d, i) { d.classList.toggle('is-active', i === current); });
+        var cardStep = slides[1] ? slides[1].offsetLeft - slides[0].offsetLeft : track.clientWidth;
+        var idx = Math.round(track.scrollLeft / cardStep);
+        current = Math.min(pages - 1, Math.round(idx / perView));
+        setActive();
       }, 100);
     }, { passive: true });
+
+    var resizeTimeout;
+    window.addEventListener('resize', function () {
+      clearTimeout(resizeTimeout);
+      resizeTimeout = setTimeout(init, 150);
+    });
+
+    init();
   }
 
 

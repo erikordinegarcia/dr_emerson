@@ -232,8 +232,8 @@ input, textarea, button { font-family: inherit; font-size: inherit; }
 }
 
 .logo__mark {
-  width: 84px;
-  height: 84px;
+  width: 64px;
+  height: 64px;
   flex-shrink: 0;
   object-fit: contain;
 }
@@ -902,3 +902,15 @@ body.menu-open { overflow: hidden; }
   .about__badge { padding: 14px 16px; max-width: 180px; }
   .about__badge strong { font-size: 1.5rem; }
 }
+
+
+/* ===== Depoimentos estilo avaliação ===== */
+.testimonial-card{display:flex;flex-direction:column;gap:18px;flex:0 0 calc((100% - 52px)/3);padding:32px 28px}
+@media (max-width:960px){.testimonial-card{flex:0 0 calc((100% - 26px)/2)}}
+@media (max-width:640px){.testimonial-card{flex:0 0 100%}}
+.testimonial-card__stars{color:var(--gold);letter-spacing:3px;line-height:1}
+.testimonial-card__quote{font-size:1.05rem;margin-bottom:0}
+.testimonial-card__author-row{display:flex;align-items:center;gap:14px;padding-top:18px;margin-top:auto;border-top:1px solid var(--border)}
+.testimonial-card__avatar{width:46px;height:46px;flex:0 0 46px;border-radius:50%;background:var(--ink);color:var(--gold);font-family:var(--font-display);font-weight:700;display:flex;align-items:center;justify-content:center}
+.testimonial-card__name{font-weight:600;color:var(--ink);margin:0}
+.testimonial-card__meta{color:var(--text-light);font-size:.82rem;margin:0}
