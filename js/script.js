@@ -1,13 +1,5 @@
-/* =================================================================
-   Dr Emerson Advocacia
-   JavaScript puro (Vanilla JS)
-   ================================================================= */
-
 document.addEventListener('DOMContentLoaded', function () {
 
-  /* ---------------------------------------------------------------
-     1. HEADER — sombra ao rolar
-     --------------------------------------------------------------- */
   var header = document.getElementById('header');
 
   function updateHeaderOnScroll() {
@@ -20,10 +12,6 @@ document.addEventListener('DOMContentLoaded', function () {
   updateHeaderOnScroll();
   window.addEventListener('scroll', updateHeaderOnScroll, { passive: true });
 
-
-  /* ---------------------------------------------------------------
-     2. MENU MOBILE
-     --------------------------------------------------------------- */
   var menuToggle = document.getElementById('menuToggle');
   var mobileMenu = document.getElementById('mobileMenu');
   var mobileMenuOverlay = document.getElementById('mobileMenuOverlay');
@@ -66,10 +54,6 @@ document.addEventListener('DOMContentLoaded', function () {
     }
   });
 
-
-  /* ---------------------------------------------------------------
-     3. SCROLL SUAVE
-     --------------------------------------------------------------- */
   var internalLinks = document.querySelectorAll('a[href^="#"]');
   internalLinks.forEach(function (link) {
     link.addEventListener('click', function (e) {
@@ -86,10 +70,6 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   });
 
-
-  /* ---------------------------------------------------------------
-     4. ANIMAÇÕES DE ENTRADA (IntersectionObserver)
-     --------------------------------------------------------------- */
   var animatedEls = document.querySelectorAll('[data-animate]');
 
   if ('IntersectionObserver' in window) {
@@ -109,10 +89,6 @@ document.addEventListener('DOMContentLoaded', function () {
     animatedEls.forEach(function (el) { el.classList.add('is-visible'); });
   }
 
-
-  /* ---------------------------------------------------------------
-     5. CARROSSEL DE DEPOIMENTOS
-     --------------------------------------------------------------- */
   var track = document.getElementById('testimonialsTrack');
   var dotsWrap = document.getElementById('testimonialDots');
   var prevBtn = document.getElementById('testimonialPrev');
@@ -191,11 +167,6 @@ document.addEventListener('DOMContentLoaded', function () {
 
     init();
   }
-
-
-  /* ---------------------------------------------------------------
-     6. VALIDAÇÃO DO FORMULÁRIO DE CONTATO
-     --------------------------------------------------------------- */
   var form = document.getElementById('contactForm');
 
   if (form) {
@@ -266,8 +237,6 @@ document.addEventListener('DOMContentLoaded', function () {
       var validMessage = validateField('message');
 
       if (validName && validEmail && validPhone && validMessage) {
-        // Envio real ainda não implementado — apenas validação no front-end,
-        // conforme solicitado. Integrar com backend/e-mail futuramente.
         feedback.textContent = 'Mensagem validada com sucesso! Em breve retornaremos o contato.';
         feedback.classList.add('is-success');
         form.reset();

@@ -1,13 +1,4 @@
-/* =================================================================
-   Dr Emerson Advocacia
-   Stylesheet organizado por seções
-   ================================================================= */
-
-/* -----------------------------------------------------------------
-   1. VARIÁVEIS / TOKENS
-   ----------------------------------------------------------------- */
 :root {
-  /* Cores */
   --gold: #C9A46B;
   --gold-dark: #A67C3D;
   --gold-light: #E8D3AE;
@@ -24,11 +15,9 @@
   --success: #3E8E5A;
   --danger: #C4463A;
 
-  /* Tipografia */
   --font-display: 'Playfair Display', Georgia, serif;
   --font-body: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
 
-  /* Layout */
   --container-w: 1240px;
   --radius-sm: 8px;
   --radius-md: 16px;
@@ -41,9 +30,6 @@
   --ease: cubic-bezier(0.22, 1, 0.36, 1);
 }
 
-/* -----------------------------------------------------------------
-   2. RESET
-   ----------------------------------------------------------------- */
 *, *::before, *::after { box-sizing: border-box; }
 
 html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; overflow-x: hidden; max-width: 100%; }
@@ -107,9 +93,6 @@ input, textarea, button { font-family: inherit; font-size: inherit; }
 }
 .skip-link:focus { left: 0; }
 
-/* -----------------------------------------------------------------
-   3. UTILITÁRIOS / TIPOGRAFIA
-   ----------------------------------------------------------------- */
 .section-kicker {
   font-family: var(--font-body);
   font-size: 0.88rem;
@@ -148,9 +131,6 @@ input, textarea, button { font-family: inherit; font-size: inherit; }
 }
 [data-animate].is-visible { opacity: 1; transform: translateY(0); }
 
-/* -----------------------------------------------------------------
-   4. BOTÕES
-   ----------------------------------------------------------------- */
 .btn {
   display: inline-flex;
   align-items: center;
@@ -197,9 +177,6 @@ input, textarea, button { font-family: inherit; font-size: inherit; }
 .btn--full { width: 100%; }
 .btn--header { flex-shrink: 0; }
 
-/* -----------------------------------------------------------------
-   5. HEADER
-   ----------------------------------------------------------------- */
 .header-wrap {
   position: sticky;
   top: 0;
@@ -341,9 +318,6 @@ input, textarea, button { font-family: inherit; font-size: inherit; }
 .mobile-menu__overlay.is-open { opacity: 1; pointer-events: auto; }
 body.menu-open { overflow: hidden; }
 
-/* -----------------------------------------------------------------
-   6. HERO
-   ----------------------------------------------------------------- */
 .hero {
   position: relative;
   overflow: hidden;
@@ -433,9 +407,6 @@ body.menu-open { overflow: hidden; }
 
 .hero__divider { height: 4px; }
 
-/* -----------------------------------------------------------------
-   7. ÁREAS DE ATUAÇÃO
-   ----------------------------------------------------------------- */
 .areas { padding: 100px 0 90px; background: var(--paper); }
 
 .areas__grid {
@@ -488,9 +459,6 @@ body.menu-open { overflow: hidden; }
 .area-card p { color: var(--text-light); font-size: 0.94rem; margin-bottom: 20px; }
 .area-card__cta { width: 100%; }
 
-/* -----------------------------------------------------------------
-   8. SOBRE
-   ----------------------------------------------------------------- */
 .about { padding: 110px 0; background: var(--ink); overflow: hidden; }
 
 .about__inner {
@@ -530,7 +498,6 @@ body.menu-open { overflow: hidden; }
 
 .about__image { width: 100%; height: 100%; object-fit: cover; display: block; }
 
-/* moldura dourada decorativa atrás das fotos (ocultada no mobile, ver media query) */
 .about__media::before {
   content: '';
   position: absolute;
@@ -589,9 +556,6 @@ body.menu-open { overflow: hidden; }
   min-width: 0;
 }
 
-/* -----------------------------------------------------------------
-   9. PROCESSO
-   ----------------------------------------------------------------- */
 .process { background: var(--ink); padding: 100px 0; }
 
 .process__timeline {
@@ -619,9 +583,6 @@ body.menu-open { overflow: hidden; }
 .process__step h3 { color: var(--white); font-size: 1.05rem; margin-bottom: 8px; }
 .process__step p { color: var(--text-on-dark-muted); font-size: 0.92rem; }
 
-/* -----------------------------------------------------------------
-   10. DEPOIMENTOS
-   ----------------------------------------------------------------- */
 .testimonials { padding: 100px 0; background: var(--paper); }
 
 .testimonials__track {
@@ -675,9 +636,6 @@ body.menu-open { overflow: hidden; }
 }
 .testimonials__dots button.is-active { background: var(--gold-dark); transform: scale(1.2); }
 
-/* -----------------------------------------------------------------
-   11. CTA
-   ----------------------------------------------------------------- */
 .cta {
   background: linear-gradient(120deg, var(--gold) 0%, var(--gold-dark) 100%);
   padding: 90px 0;
@@ -686,9 +644,6 @@ body.menu-open { overflow: hidden; }
 .cta__inner h2 { color: var(--ink); font-size: clamp(1.8rem, 1.4vw + 1.4rem, 2.4rem); margin-bottom: 18px; }
 .cta__inner p { color: rgba(11,15,20,0.75); margin-bottom: 30px; font-size: 1.05rem; }
 
-/* -----------------------------------------------------------------
-   12. CONTATO
-   ----------------------------------------------------------------- */
 .contact { padding: 100px 0 120px; background: var(--white); }
 
 .contact__grid { display: grid; grid-template-columns: 0.85fr 1.15fr; gap: 56px; }
@@ -765,9 +720,6 @@ body.menu-open { overflow: hidden; }
 .form-feedback.is-success { display: block; background: rgba(62,142,90,0.12); color: var(--success); }
 .form-feedback.is-error { display: block; background: rgba(196,70,58,0.1); color: var(--danger); }
 
-/* -----------------------------------------------------------------
-   13. FOOTER
-   ----------------------------------------------------------------- */
 .footer { background: var(--ink); color: var(--text-on-dark-muted); }
 
 .footer__inner {
@@ -805,9 +757,6 @@ body.menu-open { overflow: hidden; }
   font-size: 0.8rem;
 }
 
-/* -----------------------------------------------------------------
-   14. WHATSAPP FLUTUANTE
-   ----------------------------------------------------------------- */
 
 .wppFloat {
   position: fixed;
@@ -835,9 +784,7 @@ body.menu-open { overflow: hidden; }
   transform: scale(1.06);
   box-shadow: 0 20px 40px rgba(0, 0, 0, 0.45);
 }
-/* -----------------------------------------------------------------
-   15. RESPONSIVIDADE
-   ----------------------------------------------------------------- */
+
 @media (min-width: 1441px) {
   :root { --container-w: 1360px; }
 }
@@ -904,7 +851,6 @@ body.menu-open { overflow: hidden; }
 }
 
 
-/* ===== Depoimentos estilo avaliação ===== */
 .testimonial-card{display:flex;flex-direction:column;gap:18px;flex:0 0 calc((100% - 52px)/3);padding:32px 28px}
 @media (max-width:960px){.testimonial-card{flex:0 0 calc((100% - 26px)/2)}}
 @media (max-width:640px){.testimonial-card{flex:0 0 100%}}
